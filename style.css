@@ -52,7 +52,7 @@ body {
     animation: floaty .2s infinite;
 }
 
-#spooky #body:after {
+#spooky #body:before {
     left: -18px;
 }
 
@@ -65,7 +65,7 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     padding: 90px 0 0;
-    width: 90 px;
+    width: 90px;
     height: 20 px;
 }
 
@@ -125,5 +125,21 @@ body {
 }
 
 @keyframes floaty {
-    0%, 
+    0%, 100% {
+        transform: translateY(0);
+}
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes zoomy {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
 }
